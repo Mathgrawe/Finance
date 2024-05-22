@@ -13,11 +13,10 @@ type FormField = {
 
 export default function TextInput({password = false, bigText = false, autoCapitalize = false, showLabel = true,  ...props}: FormField) {
     return (
-        <View className="flex flex-col">
-            {showLabel && <Text className="text-sm px-2 mb-1">{props.label}</Text>}
+        <View className="flex flex-col ">
             <RNTextInput
                 placeholder={props.label}
-                className={`w-full ${bigText ? "h-36" : "h-10"} w-full flex flex-row items-center p-2 bg-white rounded-md border border-slate-200 mb-4 focus:border-blue-500 text-gray-900`}
+                className={`w-full ${bigText ? "h-36" : "h-10"} w-full flex flex-row items-center p-2 bg-white rounded-xl border border-slate-200 mb-4 focus:border-blue-500 text-gray-900`}
                 autoCapitalize={autoCapitalize ? "sentences" : "none"}
                 secureTextEntry={password}
                 value={props.value}
